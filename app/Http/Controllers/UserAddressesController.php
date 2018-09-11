@@ -45,7 +45,7 @@ class UserAddressesController extends Controller
     public function update(UserAddress $user_address, UserAddressRequest $request)
     {
         $this->authorize('own', $user_address);
-        
+
         $user_address->update($request->only([
             'province',
             'city',
